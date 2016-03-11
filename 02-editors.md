@@ -59,7 +59,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I plan on using Emacs. I picked Emacs because it has a relatively easier learning curve than vim, and is both a terminal editor and graphical editor.
 
 --
 
@@ -67,6 +67,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I'll use Emacs as my graphical editor. An interesting feature of Emacs is that you can run SQL with Emacs. Some useful keyboard shortcuts are C - v and M - v to move forward or backward one screenful. Emacs is customizable by changing variables. setq variable-name new-value
 
  

@@ -46,7 +46,28 @@ This would return ['apple', 'banana', 'Coconut', 'watermelon'], because even tho
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List comprehension is a syntax used to create lists. It is generally in the form of [expression-involving-loop-variable for loop variable in sequence]. For example, if we wanted to create a list of the squares of integers from 0 to 9 we could write  
+squares = [x\*\*2 for x in range(10)]  
+The map equivalent of this would be:    
+squares = map(lambda x: x\*\*2, range(10))
+
+If we only wanted to include squared values between 5 and 50, we could use list comprehension accordingly:
+filtered_squares = [s for s in [x\*\*2 for x in range(10)] if s > 5 and s < 50]
+
+If we were to use filter(), we would need to utilize our squares from above:
+filtered_squares = filter(lambda x: x>5 and x<50, squares)
+
+set comprehensions work in the same way
+
+a = {x for x in 'zebra' if x not in 'abc'}
+a would be (['z','e','r'])
+
+dictionary comprehensions work in the same way  
+
+b = {x: x\*\*2 for x in (3, 5, 7)}
+b would be {3: 9, 5: 25, 7: 49} 
+
+
 
 ---
 

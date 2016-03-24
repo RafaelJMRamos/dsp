@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Python lists and tuples are similar in that they are sequences of values. They are also indexed by integers. The main   difference between them is that tuples are immutable, while lists are. Lists are denoted using square brackets [ ] while tuples are generally denoted using parenthesis ( ). Only tuples will work as keys in dictionaries, because they are hashable. This means that there is a specific integer that correlates to a specific value. Keys must be immutable to be hashable, otherwise there could potentially be multiple integers for one key. 
 
 ---
 
@@ -20,7 +20,13 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Python lists and sets are similar in that they store sequences of values. The main difference is that sets do not allow duplicates, and they are unordered, while lists are indexed by integers. An example of a list is  
+a = [1, 2, 1, 2, 3]  
+
+An example of a set would be  
+b = ([1, 2, 3, 4, 5, 6])  
+
+Sets are better for finding a specific element because there are no duplicates and because they are unordered.
 
 ---
 
@@ -28,7 +34,11 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Python's lamda is essentially a way of creating a function without assigning it a name. This makes it valuable for creating parameters to other functions. For example, it can be used in the key argument of a sorted function to perform operations on a list before it is compared and sorted. Ex:  
+  
+sorted(['watermelon', 'Coconut', 'banana', 'apple'], key=lamda word: word.lower())  
+
+This would return ['apple', 'banana', 'Coconut', 'watermelon'], because even though 'Coconut is capitalized (and thus would appear first), our function of lamda turns it into 'coconut' before comparing and sorting it.
 
 ---
 

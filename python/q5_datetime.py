@@ -12,6 +12,10 @@ days
 ####b)  
 date_start = '12312013'  
 date_stop = '05282015'  
+d1 = datetime.stptime(date_start, '%m%d%Y')
+d2 = datetime.stptime(date_stop, '%m%d%Y')
+days = abs((d2-d1).days)  
+days
 
 ####c)  
 date_start = '15-Jan-1994'  

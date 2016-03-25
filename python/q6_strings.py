@@ -52,6 +52,8 @@ def both_ends(s):
 
 
 def fix_start(s):
+    return s[0] + s[1:].replace(s[0],'*')
+    
     """
     Given a string s, return a string where all occurences of its
     first char have been changed to '*', except do not change the
@@ -71,6 +73,7 @@ def fix_start(s):
 
 
 def mix_up(a, b):
+    return b[:2]+a[2:]+' '+a[:2]+b[2:]
     """
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of

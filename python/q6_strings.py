@@ -117,6 +117,12 @@ def verbing(s):
 
 
 def not_bad(s):
+    snot = s.find('not')
+    sbad = s.find('bad')
+    if sbad>snot:
+        s = s.replace(s[snot:(sbad+3)], 'good')
+    return s
+    
     """
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
@@ -137,6 +143,23 @@ def not_bad(s):
 
 
 def front_back(a, b):
+    alength = len(a)
+    blength = len(b)
+    if alength % 2 == 0:
+        aindex = alength // 2
+    else:
+        aindex = (alength // 2) + 1
+    if blength %2 == 0:
+        bindex = blength // 2
+    else:
+        bindex = (blength // 2) + 1
+    afront = a[0:aindex]
+    aback = a[aindex:]
+    bfront = b[0:bindex]
+    bback = b[bindex:]
+    return afront + bfront + aback + bback
+    
+
     """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is

@@ -25,6 +25,15 @@ def match_ends(words):
 
 
 def front_x(words):
+    xlist = []
+    alist = []
+    for word in words:
+        if word.startswith('x'):
+            xlist.append(word)
+        else:
+            alist.append(word)
+    return sorted(xlist) + sorted(alist)
+    
     """
     Given a list of strings, return a list with the strings in sorted
     order, except group all the strings that begin with 'x' first.
@@ -42,6 +51,8 @@ def front_x(words):
 
 
 def sort_last(tuples):
+    return sorted(tuples, key=lambda tuples: tuples[-1])
+    
     """
     Given a list of non-empty tuples, return a list sorted in
     increasing order by the last element in each tuple.
@@ -59,6 +70,12 @@ def sort_last(tuples):
 
 
 def remove_adjacent(nums):
+    removed_list = []
+    for num in nums:
+        if len(removed_list) == 0 or num!= removed_list[-1]:
+            removed_list.append(num)
+    return removed_list
+    
     """
     Given a list of numbers, return a list where all adjacent equal
     elements have been reduced to a single element, so [1, 2, 2, 3]
@@ -78,6 +95,16 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
+    merged_list = []
+    while len(list1) and len(list2):
+        if list1[0] < list2[0]:
+            result.append(list1.pop(0))
+        else:
+            result.append(list2.pop(0))
+    merged_list.extend(list1)
+    merged_list.extend(list2)
+    return merged_list
+    
     """
     Given two lists sorted in increasing order, create and return a
     merged list of all the elements in sorted order. You may modify

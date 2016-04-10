@@ -1,5 +1,5 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
-
+``` python
 import nsfg
 import thinkstats2
 import math
@@ -40,3 +40,4 @@ print(CohenEffectSize(firsts.totalwgt_lb, others.totalwgt_lb))
 print(CohenEffectSize(firsts.prglngth, others.prglngth))
 #Cohen's D effect size is much greater for total weight than for pregnancy length.
 # -.0886 standard deviations difference in means for weight vs .0288 standard deviations difference in means for length
+```
